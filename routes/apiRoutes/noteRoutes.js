@@ -27,7 +27,7 @@ router.post('/notes', (req, res) => {
   if (!validateNote(req.body)) {
     res.status(400).send('The note is not properly formatted.');
   } else {
-    const note = createNewANote(req.body, notes);
+    const note = createNewNote(req.body, notes);
     res.json(note);
   }
 });
